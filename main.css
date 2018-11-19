@@ -65,7 +65,6 @@ body {
     position: absolute;
     left: calc(50% - 400px);
     text-align: center;
-    background-color: rgb(224, 203, 244)
 }
 
 .my_h {
@@ -109,10 +108,16 @@ input[type=tel]:invalid {
 }
 
 .required:after {
-    position: absolute;
-    display: block;
     right: 10px;
     top: 10px;
     color: red;
     content: '*';
+}
+
+.li-class {
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    color: brown;
+
 }

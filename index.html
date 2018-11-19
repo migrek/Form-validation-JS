@@ -10,11 +10,12 @@
 </head>
 <body>
     <form action="get" class="my_form">
-        <h2 class="my_h">Заполните форму: </h2>
-        <div class="wrapper-input"> <label class="my-label" for="inputName">User name:</label><input class="form-item required" type="text" id="inputName" required pattern="[A-Za-z]" placeholder="Name"></div>
-        <div class="wrapper-input"> <label class="my-label" for="inputEmail">Email:</label><input class="form-item required" type="email" id="inputEmail" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}"></div>
-        <div class="wrapper-input"> <label class="my-label" for="pass">Password:</label><input class="form-item required" type="password" id="pass" required pattern=[A-Za-z0-9]{8,12} minlength="8" maxlength="12" placeholder="********"></div>
-        <div class="wrapper-input"> <label class="my-label" for="confirmPass">Confirm Password:</label><input class="form-item required" type="password" id="confirmPass" required minlength="8" maxlength="12" placeholder="********"></div>
+        <h2 class="my_h">Fill the form: </h2>
+        <ul class="error-list"></ul>
+        <div class="wrapper-input"> <label class="my-label required" for="inputName">User name:</label><input class="form-item" type="text" id="inputName" required pattern="[A-Za-z]" placeholder="Name"></div>
+        <div class="wrapper-input"> <label class="my-label required" for="inputEmail">Email:</label><input class="form-item" type="email" id="inputEmail" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}"></div>
+        <div class="wrapper-input"> <label class="my-label required" for="pass">Password:</label><input class="form-item" type="password" id="pass" required pattern=[A-Za-z0-9]{8,12}></div>
+        <div class="wrapper-input"> <label class="my-label" for="confirmPass">Confirm Password:</label><input class="form-item" type="password" id="confirmPass"></div>
         <div class="wrapper-input"> <label class="my-label" for="selectedGender">Gender:</label>
             <select class="form-item" id="selectedGender">
                 <option></option>
@@ -23,8 +24,8 @@
                 <option>Not determined</option>
             </select>
         </div>
-         <input class="form-item submit-b" type="submit" id="btnSubmit" value="Отправить">
-        <input class="form-item reset-b" type="reset" value="Отменить">
+        <input class="form-item submit-b" type="submit" id="btnSubmit" value="Send">
+        <input class="form-item reset-b" type="reset" value="Reset">
     </form>
 
 </body>
