@@ -16,6 +16,7 @@ btnSubmit = document.querySelector('#btnSubmit');
 btnSubmit.addEventListener('click', function(event) {
     event.preventDefault();
     checkErrors();
+	showErrors(checkErrors());
 });
 }
 
@@ -58,22 +59,23 @@ function checkErrors() {
     if (selectedGender.hasAttribute('required') && selectedGender.value.length == 0) {
         errorList.push('Select gender');
     };
-
-    showErrors(errorList)
+	
+	return errorList
 
 };
 
 function showErrors(list) {
+	errorBlock = document.querySelector('.error-list');
+	errorBlock.innerHTML = '';
     if (list.length > 0) {
-        errorBlock = document.querySelector('.error-list');
         for (var i = 0; i < list.length; i++) {
             let errorItem = document.createElement('li');
             errorItem.className = 'li-class';
             errorItem.innerHTML = list[i];
             errorBlock.appendChild(errorItem);
-        };
+			};
         }
-    else alert("Your data from form sended");
+    else alert("Your data from form sent");
 
 }
 
