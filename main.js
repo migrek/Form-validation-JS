@@ -28,7 +28,7 @@ function checkErrors() {
     else if (inputName.hasAttribute('pattern')) {
         var patternName = inputName.getAttribute('pattern');
         var reg = new RegExp(patternName);
-        if (!reg.test(inputName.value.toUpperCase())) {
+        if (!reg.test(inputName.value)) {
             errorList.push('User name is not valid');
         };
     };
@@ -38,7 +38,7 @@ function checkErrors() {
     else if (inputEmail.hasAttribute('pattern')) {
         var patternMail = inputEmail.getAttribute('pattern');
         var regMail = new RegExp(patternMail);
-        if (!regMail.test(inputEmail.value)) {
+        if (!regMail.test(inputEmail.value.toUpperCase())) {
             errorList.push('Mail is not valid');
         }; 
     };
