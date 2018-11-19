@@ -16,7 +16,7 @@ btnSubmit = document.querySelector('#btnSubmit');
 btnSubmit.addEventListener('click', function(event) {
     event.preventDefault();
     checkErrors();
-	showErrors(checkErrors());
+    showErrors(checkErrors());
 });
 }
 
@@ -65,17 +65,16 @@ function checkErrors() {
 };
 
 function showErrors(list) {
-	errorBlock = document.querySelector('.error-list');
-	errorBlock.innerHTML = '';
+    errorBlock = document.querySelector('.error-list');
+    errorBlock.innerHTML = '';
     if (list.length > 0) {
         for (var i = 0; i < list.length; i++) {
             let errorItem = document.createElement('li');
             errorItem.className = 'li-class';
             errorItem.innerHTML = list[i];
             errorBlock.appendChild(errorItem);
-			};
-        }
+	};
+    };
     else alert("Your data from form sent");
-
-}
+};
 
